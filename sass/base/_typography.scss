@@ -1,7 +1,21 @@
-/**
- * Basic typography style for copy text
- */
-body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+.heading-primary {
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+  display: inline-block;
+}
+
+.heading-secondary {
+  font-size: $paragraph-font-size;
+  font-weight: $font-weight-bold;
+
+  &:hover {
+    color: #ae3ec9;
+    cursor: pointer;
+  }
+}
+
+.paragraph {
+  font-size: $paragraph-font-size;
+  font-weight: $font-weight-light;
+  color: $color-grey;
 }

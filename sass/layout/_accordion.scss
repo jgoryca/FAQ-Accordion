@@ -1,0 +1,30 @@
+.accordion {
+  background-color: $color-white;
+  width: 40%;
+  padding: 4rem;
+  padding-bottom: 2rem;
+  z-index: 999;
+  border-radius: 15px;
+  box-shadow: 0 1.5rem 4rem rgba($color-grey, 0.2);
+
+  &-title {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__section {
+    padding: 1rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-grey-light;
+    }
+  }
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+}
