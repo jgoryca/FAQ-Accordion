@@ -1,19 +1,26 @@
 "use strict";
 
-const sectionTitle = document.querySelectorAll(".section-title");
-const paragraph = document.querySelectorAll(".paragraph");
-const iconPlus = document.querySelectorAll(".icon-plus");
-const iconMinus = document.querySelectorAll(".icon-minus");
+const links = document.getElementsByTagName("a");
+const paragraph = document.querySelector(".paragraph");
 
-sectionTitle.forEach(function (el, i) {
-  el.addEventListener("click", function (e) {
-    if (
-      e.target.classList.contains("heading-secondary") ||
-      e.target.classList.contains("icon")
-    ) {
-      paragraph[i].classList.toggle("hidden");
-      iconPlus[i].classList.toggle("hidden");
-      iconMinus[i].classList.toggle("hidden");
-    }
+const getSectionNumber = function (id) {
+  return id.slice(-1);
+};
+
+const openClose = function (sectionNumber) {
+  document
+    .querySelector(`.paragraph--${sectionNumber}`)
+    .classList.toggle("hidden");
+  document
+    .getElementById(`icon-plus--${sectionNumber}`)
+    .classList.toggle("hidden");
+  document
+    .getElementById(`icon-minus--${sectionNumber}`)
+    .classList.toggle("hidden");
+};
+
+Array.from(links).forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    openClose(getSectionNumber(e.target.id));
   });
 });
