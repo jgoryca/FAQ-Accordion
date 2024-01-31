@@ -1,13 +1,17 @@
 .icon {
   &-plus {
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      opacity: 0.5;
     }
   }
 
   &-minus {
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      opacity: 0.5;
     }
   }
 }

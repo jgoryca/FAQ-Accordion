@@ -2,14 +2,32 @@
   font-size: $h1-font-size;
   font-weight: $font-weight-bold;
   display: inline-block;
+
+  @include breakpoint($small) {
+    font-size: 4rem;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:hover,
+  &:visited {
+    color: $color-black;
+  }
 }
 
 .heading-secondary {
-  font-size: $paragraph-font-size;
+  font-size: $h2-font-size;
   font-weight: $font-weight-bold;
 
+  @include breakpoint($small) {
+    font-size: 1.8rem;
+  }
+
   &:hover {
-    color: #ae3ec9;
+    color: $color-primary-medium;
     cursor: pointer;
   }
 }

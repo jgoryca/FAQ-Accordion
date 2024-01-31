@@ -9,8 +9,14 @@ $color-grey: hsl(210, 7%, 56%);
 $color-grey-light: hsl(210, 16%, 93%);
 
 //Fonts
-$paragraph-font-size: 1.6rem;
+$paragraph-font-size: 1.5rem;
+$h2-font-size: 1.6rem;
 $h1-font-size: 5.5rem;
 $font-weight-light: 400;
 $font-weight-medium: 600;
 $font-weight-bold: 700;
+
+//Media queries breakpoints
+$large: 1320px;
+$medium: 890px;
+$small: 670px;

@@ -4,8 +4,21 @@
   padding: 4rem;
   padding-bottom: 2rem;
   z-index: 999;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 1.5rem 4rem rgba($color-grey, 0.2);
+
+  @include breakpoint($large) {
+    min-width: 60%;
+  }
+
+  @include breakpoint($medium) {
+    min-width: 80%;
+  }
+
+  @include breakpoint($small) {
+    min-width: 90%;
+    padding: 2rem;
+  }
 
   &-title {
     display: flex;
@@ -26,5 +39,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   padding: 1.6rem 0;
 }

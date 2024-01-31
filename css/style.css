@@ -9,6 +9,11 @@ html {
   padding: 0;
   box-sizing: inherit; }
 
+*:focus {
+  outline: none; }
+  *:focus-visible {
+    outline: 3px solid #ae40c9; }
+
 body {
   background-color: #f9f0ff;
   position: relative;
@@ -27,16 +32,27 @@ main {
   font-size: 5.5rem;
   font-weight: 700;
   display: inline-block; }
+  @media screen and (max-width: 670px) {
+    .heading-primary {
+      font-size: 4rem; } }
+
+a {
+  text-decoration: none; }
+  a:link, a:hover, a:visited {
+    color: black; }
 
 .heading-secondary {
   font-size: 1.6rem;
   font-weight: 700; }
+  @media screen and (max-width: 670px) {
+    .heading-secondary {
+      font-size: 1.8rem; } }
   .heading-secondary:hover {
-    color: #ae3ec9;
+    color: #ae40c9;
     cursor: pointer; }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #878f97; }
 
@@ -59,8 +75,18 @@ main {
   padding: 4rem;
   padding-bottom: 2rem;
   z-index: 999;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 1.5rem 4rem rgba(135, 143, 151, 0.2); }
+  @media screen and (max-width: 1320px) {
+    .accordion {
+      min-width: 60%; } }
+  @media screen and (max-width: 890px) {
+    .accordion {
+      min-width: 80%; } }
+  @media screen and (max-width: 670px) {
+    .accordion {
+      min-width: 90%;
+      padding: 2rem; } }
   .accordion-title {
     display: flex;
     align-items: center;
@@ -74,13 +100,19 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   padding: 1.6rem 0; }
 
 .logo {
   display: inline-block; }
+  @media screen and (max-width: 670px) {
+    .logo {
+      width: 3rem; } }
 
-.icon-plus:hover {
-  cursor: pointer; }
+.icon-plus:hover, .icon-plus:focus {
+  cursor: pointer;
+  opacity: 0.5; }
 
-.icon-minus:hover {
-  cursor: pointer; }
+.icon-minus:hover, .icon-minus:focus {
+  cursor: pointer;
+  opacity: 0.5; }
